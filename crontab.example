@@ -1,0 +1,11 @@
+# Sample cron entries for Bash Maintenance Suite (run 'crontab crontab.example' as your user)
+# Use 'sudo crontab -e' for root-level scheduling if needed.
+
+# Daily backup at 02:15
+15 2 * * * /bin/bash /path/to/BashMaintenanceSuite/backup.sh >> /path/to/BashMaintenanceSuite/logs/cron_backup.log 2>&1
+
+# Daily updates & cleanup at 03:30
+30 3 * * * /bin/bash /path/to/BashMaintenanceSuite/update_cleanup.sh >> /path/to/BashMaintenanceSuite/logs/cron_update.log 2>&1
+
+# Log monitor every 15 minutes
+*/15 * * * * /bin/bash /path/to/BashMaintenanceSuite/log_monitor.sh >> /path/to/BashMaintenanceSuite/logs/cron_log_monitor.log 2>&1
